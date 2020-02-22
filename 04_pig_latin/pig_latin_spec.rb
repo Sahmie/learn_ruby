@@ -6,7 +6,7 @@
 # # Pig Latin
 #
 # Pig Latin is a made-up children's language that's intended to be confusing. It obeys a few simple rules (below) but when it's spoken quickly it's really difficult for non-children (and non-native speakers) to understand.
-#
+#index = word[word.index(w)...word.length]
 # Rule 1: If a word begins with a vowel sound, add an "ay" sound to the end of the word.
 #
 # Rule 2: If a word begins with a consonant sound, move it to the end of the word, and then add an "ay" sound to the end of the word.
@@ -70,3 +70,27 @@ describe "#translate" do
   # * retain the punctuation from the original phrase
 
 end
+
+
+
+
+
+
+
+# def translate(word)
+#   vowels = 'aeio'
+#   index = 's'
+#   #for words beggining with vowels
+#   if vowels.include? word[0]
+#     word += 'ay'
+#   else
+#     word.each_char do |w|
+#       if vowels.include? w 
+#         index = word[0...word.index(w)] 
+#         word = word[word.index(w)...word.length] + index
+#       end
+#     end
+#     return word + 'ay'
+#   end
+#   word
+# end
