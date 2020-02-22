@@ -12,7 +12,7 @@ def translate(words)
       result_arr << word
     else
       word.each_char do |w|
-        if vowels.include? w 
+        if (vowels.include? w) && (index.length == 0)
           index = word[0...word.index(w)] 
           temp = word[word.index(w)...word.length] + index + 'ay'
         end
@@ -23,3 +23,6 @@ def translate(words)
   end
   return result_arr.join(' ')
 end
+
+
+puts translate('the quick brown fox')
